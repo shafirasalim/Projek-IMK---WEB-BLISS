@@ -1,0 +1,340 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Amiri", serif;
+}
+
+body {
+  background: url("BACKGROUND.png") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  color: #4a216f;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 5%;
+}
+
+.navbar .logo img {
+  width: 85px;
+  height: 85px;
+  object-fit: contain;
+  display: block;
+  margin: 20px 0 0 0;
+}
+
+.navigasi {
+  display: flex;
+  list-style: none;
+}
+
+.navigasi li {
+  margin: 0 13px;
+  font-size: 16px;
+}
+
+.navigasi .nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navigasi .nav a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.navigasi .nav {
+  padding: 5px 10px;
+}
+
+.navigasi .nav a {
+  color: #000;
+}
+.profil {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.profil a {
+  display: flex;
+  align-items: center;
+}
+
+.profil img.profil-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin-top: -5px; /* ini yang menyamakan tingginya */
+}
+.profil {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  margin-top: 4px; /* optional */
+}
+
+/* KATEGORI IKON */
+.kategori-ikon {
+  text-align: center;
+  padding: 50px 20px;
+  height: 450px;
+}
+
+.kategori-ikon h2 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 40px;
+  color: #3c2a4d;
+  margin-bottom: 70px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.kategoriikon-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.kategoriikon-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ikon {
+  width: 120px;
+  height: 120px;
+  background-color: #f3e8ff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0;
+  position: relative;
+}
+
+.ikon img {
+  width: 84px;
+  height: 84px;
+}
+
+.kategoriikon-item p {
+  position: absolute;
+  bottom: -15px;
+  background-color: #cba5f3;
+  color: #2c1a38;
+  padding: 2px 14px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  font-size: 18px;
+  font-family: "Amiri", serif;
+  width: 120px;
+  display: block;
+  text-align: center;
+}
+/* footer */
+
+/* footer */
+
+footer {
+  background-color: white;
+  color: #232f3e;
+  padding: 10px;
+  margin-top: 0;
+}
+
+.upper-footer {
+  display: flex;
+  color: #232f3e;
+  padding-top: 10px;
+  padding-left: 40px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+footer .bliss {
+  flex: 1;
+  min-width: 200px;
+}
+
+footer .bliss img {
+  width: 80px;
+  height: 80px;
+  height: auto;
+}
+
+footer .bliss p {
+  margin-top: 10px;
+  font-size: 17px;
+  color: #444;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Hukum dan Tautan Cepat */
+footer .hukumtautan {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: 40px; /* jarak dari pinggir kanan */
+  gap: 40px;
+}
+
+footer .hukum,
+footer .tautancepat {
+  flex: 1;
+}
+
+footer .tautancepat {
+  color: #000;
+}
+
+footer .hukumtautan ul li {
+  margin-bottom: 10px;
+}
+
+footer h5 {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-family: "Montserrat", sans-serif;
+  color: #2c1a38;
+}
+
+.tautancepat a {
+  color: black;
+  transition: color 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer li {
+  color: #000;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+/* Button */
+
+.avatar-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #cba5f3;
+  transition: transform 0.3s ease;
+  vertical-align: middle;
+}
+
+.avatar-icon:hover {
+  transform: scale(1.1);
+}
+#scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, #a86bd5, #f6a7c1);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 999;
+}
+
+#scrollToTop:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  #scrollTopBtn {
+    bottom: 15px;
+    right: 15px;
+    padding: 10px 14px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .kontak-container {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .kontak-form,
+  .kontak-info {
+    padding: 15px;
+  }
+
+  .kontak-info h4 {
+    text-align: center;
+  }
+
+  .kontak-info p,
+  .kontak-info .sosial-media {
+    text-align: center;
+  }
+
+  .sosial-media a {
+    margin: 0 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .kontak-box {
+    border-radius: 20px;
+    padding: 15px;
+  }
+
+  .kontak-form input,
+  .kontak-form textarea {
+    font-size: 14px;
+  }
+
+  .kontak-form button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .kontak-info h4 {
+    font-size: 18px;
+  }
+
+  .sosial-media a {
+    font-size: 18px;
+  }
+}

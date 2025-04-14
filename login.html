@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | BLISS</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/loginstyle.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-section">
+        <div class="logo">
+          <img src="assets/BLISSback.png" alt="Logo Bliss" />
+        </div>
+      </div>
+      <div class="right-section">
+        <div class="login-card">
+          <h2>Selamat Datang</h2>
+
+          <form onsubmit="handleLogin(event)">
+            <label for="nama">Nama Pengguna atau Alamat Email</label>
+            <input type="text" id="nama" name="nama" required />
+
+            <label for="password">Kata Sandi</label>
+            <input type="password" id="password" name="password" required />
+
+            <a href="#" class="forgot-password">Lupa kata sandi anda?</a>
+            <button type="submit" class="btn-masuk">Masuk</button>
+          </form>
+
+          <p class="register-link">
+            Belum punya akun? <a href="signup.html">Daftar</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function handleLogin(e) {
+        e.preventDefault();
+        const nama = document.getElementById("nama").value.trim();
+
+        if (nama !== "") {
+          sessionStorage.setItem("userLogin", nama);
+          window.location.href = "indexlogin.html";
+        } else {
+          alert("Masukkan nama terlebih dahulu!");
+        }
+      }
+    </script>
+  </body>
+</html>

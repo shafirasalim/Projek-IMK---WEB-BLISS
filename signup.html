@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup | BLISS</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/signupstyle.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-section">
+        <div class="logo">
+          <img src="assets/BLISSback.png" alt="Logo Bliss" />
+        </div>
+      </div>
+
+      <div class="right-section">
+        <div class="signup-card">
+          <h2>Buat Akun</h2>
+          <form>
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" />
+
+            <label for="email">Alamat Email</label>
+            <input type="email" id="email" name="email" />
+
+            <label for="password">Kata Sandi</label>
+            <input type="password" id="password" name="password" />
+
+            <label for="konfirmasi">Konfirmasi Kata Sandi</label>
+            <input type="password" id="konfirmasi" name="konfirmasi" />
+
+            <button
+              type="button"
+              class="btn-daftar"
+              onclick="window.location.href='indexlogin.html'"
+            >
+              Daftar
+            </button>
+          </form>
+          <p class="login-link">
+            Sudah memiliki akun? <a href="login.html">Masuk</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
