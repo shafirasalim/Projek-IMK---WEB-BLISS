@@ -24,30 +24,37 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="skincarestyle.css" />
   </head>
   <body>
     <nav class="navbar">
       <div class="logo">
-        <img src="assets/BLISSback.png" alt="LOGO BLISS" />
+        <img src="assets/BLISSback.png" alt="Logo Bliss" />
       </div>
       <ul class="navigasi">
         <li class="nav">
           <a href="../indexberandaafterlogin.html#content">BERANDA</a>
         </li>
         <li class="nav">
-          <a href="../indexberandaafterlogin.html#layanan">LAYANAN</a>
+          <a href="../navbarcontent/layanan.html#layanan">LAYANAN</a>
         </li>
         <li class="nav">
-          <a href="../indexberandaafterlogin.html#kontak">KONTAK</a>
+          <a href="../navbarcontent/kontak.html#kontak">KONTAK</a>
         </li>
         <li class="nav">
-          <a href="../indexberandaafterlogin.html#tentang">TENTANG</a>
+          <a href="../navbarcontent/tentangkami.html#tentang">TENTANG</a>
         </li>
-        <li class="profil">
-          <a href="#">
-            <img src="assets/levipp.jpg" alt="Foto Profil" class="profil-img" />
-          </a>
+        <li class="profil user-menu">
+          <span id="user-name"><i class="fa fa-user"></i> Nama User</span>
+          <div id="logout" class="logout">
+            <a href="#" onclick="logout()"
+              ><i class="fa fa-sign-out"></i> Logout</a
+            >
+          </div>
         </li>
       </ul>
     </nav>
@@ -62,7 +69,7 @@
             <h3><strong>Skincare</strong> – Bersinar dengan Percaya Diri</h3>
             <p>
               Skincare adalah fondasi kecantikan dan perawatan diri. BLISS
-              memberikan tips ahli, rekomendasi personal, serta produk terbaik
+              berikan tips ahli, rekomendasi personal, serta produk terbaik
               untuk kulit sehat dan bercahaya. Mulai dari face wash,
               moisturizer, serum, hingga sunscreen —setiap langkah penting untuk
               melindungi kilau Anda. 💜
@@ -100,6 +107,7 @@
               tangguh, menjaga rutinitas perawatan kulit yang tepat tetap
               penting untuk menjaga kesehatan dan kilau alaminya.
             </p>
+
             <div class="badge-gejala">Gejala Kulit</div>
             <div class="gejala-kulit">
               <ul class="list-gejala">
@@ -311,12 +319,13 @@
 
             <p class="teks-kulit">
               🌸<span>Kulit berminyak</span> secara alami memproduksi lebih
-              <br />banyak sebum, menciptakan kilau yang terlihat jelas,
-              terutama <br />di area T-zone (dahi, hidung, dan dagu). Meskipun
-              rentan <br />terhadap pori-pori tersumbat, komedo, dan jerawat,
-              kelembapan <br />tambahan membantu menjaga elastisitas kulit,
-              membuatnya tampak <br />lebih muda lebih lama.
+              banyak sebum, menciptakan kilau yang terlihat jelas, terutama di
+              area T-zone (dahi, hidung, dan dagu). Meskipun rentan terhadap
+              pori-pori tersumbat, komedo, dan jerawat, kelembapan tambahan
+              membantu menjaga elastisitas kulit, membuatnya tampak lebih muda
+              lebih lama.
             </p>
+
             <div class="badge-gejala">Gejala Kulit</div>
             <div class="gejala-kulit">
               <ul class="list-gejala">
@@ -379,11 +388,12 @@
 
             <p class="teks-kulit">
               🌸<span>Kulit kombinasi</span> memiliki area berminyak dan kering,
-              <br />biasanya dengan minyak berlebih di area T-zone (dahi,
-              <br />hidung, dagu) serta kekeringan di bagian wajah lainnya.
-              <br />Menyeimbangkan perbedaan ini adalah kunci untuk
-              <br />menjaga penampilan kulit yang sehat.
+              biasanya dengan minyak berlebih di area T-zone (dahi, hidung,
+              dagu) serta kekeringan di bagian wajah lainnya. Menyeimbangkan
+              perbedaan ini adalah kunci untuk menjaga penampilan kulit yang
+              sehat.
             </p>
+
             <div class="badge-gejala">Gejala Kulit</div>
             <div class="gejala-kulit">
               <ul class="list-gejala">
@@ -450,19 +460,17 @@
           <div class="tautancepat">
             <h5>Tautan Cepat</h5>
             <ul>
-              <li>
-                <a href="../../indexberandaafterlogin.html#content">Beranda</a>
+              <li class="nav">
+                <a href="../indexberandaafterlogin.html#content">Beranda</a>
               </li>
-              <li>
-                <a href="../../indexberandaafterlogin.html#layanan">Layanan</a>
+              <li class="nav">
+                <a href="../navbarcontent/layanan.html#layanan">Layanan</a>
               </li>
-              <li>
-                <a href="../../indexberandaafterlogin.html#tentang"
-                  >Tentang Kami</a
-                >
+              <li class="nav">
+                <a href="../navbarcontent/kontak.html#kontak">Kontak</a>
               </li>
-              <li>
-                <a href="../../indexberandaafterlogin.html#kontak">Kontak</a>
+              <li class="nav">
+                <a href="../navbarcontent/tentangkami.html#tentang">Tentang</a>
               </li>
             </ul>
           </div>
@@ -471,6 +479,25 @@
       <div class="footer-bottom">© 2025 Bliss. All rights reserved.</div>
     </footer>
     <button id="scrollToTop" onclick="scrollToTop()">&#8593;</button>
-    <script src="../script.js"></script>
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const userLogin = sessionStorage.getItem("userLogin");
+        const profileContent = document.getElementById("profile-content");
+
+        if (userLogin) {
+          // Tampilkan nama pengguna sebagai teks
+          profileContent.innerHTML = `
+            <span style="color: #000; font-weight: bold; font-size: 16px;">${userLogin}</span>
+          `;
+        } else {
+          // Jika tidak login, tampilkan foto profil default
+          profileContent.innerHTML = `
+            <img src="assets/levipp.jpg" alt="Foto Profil" class="profil-img" />
+          `;
+        }
+      });
+    </script>
+    <script src="navbar.js"></script>
   </body>
 </html>

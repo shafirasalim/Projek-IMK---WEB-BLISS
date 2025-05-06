@@ -1,0 +1,82 @@
+/* Tambahan untuk reset kata sandi */
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.reset-container {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.reset-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.reset-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.reset-container label {
+  text-align: left;
+  font-weight: 500;
+  color: #555;
+}
+
+.reset-container input[type="email"] {
+  padding: 10px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.2s;
+}
+
+.reset-container input[type="email"]:focus {
+  border-color: #9b59b6;
+}
+
+.reset-container button {
+  background-color: #9b59b6;
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.reset-container button:hover {
+  background-color: #4a216f;
+}
+
+.reset-container p {
+  margin-top: 20px;
+}
+
+.reset-container a {
+  color: #9b59b6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.reset-container a:hover {
+  text-decoration: underline;
+}

@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login | BLISS</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Libre+Baskerville&family=Poppins&family=Playfair+Display&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/loginstyle.css" />
@@ -22,20 +18,24 @@
         </div>
       </div>
       <div class="right-section">
+        <!-- Form Login -->
         <div class="login-card">
           <h2>Selamat Datang</h2>
-
           <form onsubmit="handleLogin(event)">
-            <label for="nama">Nama Pengguna atau Alamat Email</label>
-            <input type="text" id="nama" name="nama" required />
+            <label for="namaLogin">Nama Pengguna atau Email</label>
+            <input type="text" id="namaLogin" name="namaLogin" required />
 
-            <label for="password">Kata Sandi</label>
-            <input type="password" id="password" name="password" required />
+            <label for="passwordLogin">Kata Sandi</label>
+            <input
+              type="password"
+              id="passwordLogin"
+              name="passwordLogin"
+              required
+            />
 
-            <a href="#" class="forgot-password">Lupa kata sandi anda?</a>
+            <a href="reset.html" class="forgot-password">Lupa kata sandi?</a>
             <button type="submit" class="btn-masuk">Masuk</button>
           </form>
-
           <p class="register-link">
             Belum punya akun? <a href="signup.html">Daftar</a>
           </p>
@@ -44,11 +44,12 @@
     </div>
 
     <script>
+      // Fungsi Login
       function handleLogin(e) {
         e.preventDefault();
-        const nama = document.getElementById("nama").value.trim();
+        const nama = document.getElementById("namaLogin").value.trim();
 
-        if (nama !== "") {
+        if (nama) {
           sessionStorage.setItem("userLogin", nama);
           window.location.href = "indexlogin.html";
         } else {

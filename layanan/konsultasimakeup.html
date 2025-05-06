@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BLISS | LAYANAN | KONSULTASI MAKEUP</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/konsultasi.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="BLISSback.png" alt="Logo Bliss" />
+      </div>
+      <ul class="navigasi">
+        <li class="nav">
+          <a href="indexberandaafterlogin.html#content">BERANDA</a>
+        </li>
+        <li class="nav">
+          <a href="indexberandaafterlogin.html#layanan">LAYANAN</a>
+        </li>
+        <li class="nav">
+          <a href="indexberandaafterlogin.html#kontak">KONTAK</a>
+        </li>
+        <li class="nav">
+          <a href="indexberandaafterlogin.html#tentang">TENTANG</a>
+        </li>
+        <li class="profil user-menu">
+          <span id="user-name"><i class="fa fa-user"></i> Nama User</span>
+          <div id="logout" class="logout">
+            <a href="#" onclick="logout()"
+              ><i class="fa fa-sign-out"></i> Logout</a
+            >
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <div class="header">
+        <h1>KONSULTASI TIPS MAKEUP</h1>
+        <p>Tampil flawless dengan panduan makeup sesuai Undertonemu</p>
+      </div>
+      <div class="wrapper">
+        <div class="content">
+          <h2>Apa yang Akan Kamu Pelajari?</h2>
+          <ul>
+            <li>
+              Teknik makeup dasar: complexion, contour, eyeshadow, dan lipstik.
+            </li>
+            <li>Rekomendasi produk sesuai jenis kulit dan kondisi wajah.</li>
+            <li>
+              Makeup natural untuk daily look dan bold look untuk acara spesial.
+            </li>
+          </ul>
+
+          <h2>Tambahan Spesial:</h2>
+          <ul>
+            <li>Trik agar makeup lebih tahan lama seharian.</li>
+            <li>Tutorial makeup no-makeup look yang segar dan effortless.</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="section-divider" />
+      <div class="testimonial-title">
+        <h2>Hasil Testimoni</h2>
+      </div>
+      <div class="testimonials">
+        <div class="testimonial">
+          <div class="testimonial-imgs">
+            <img src="testimakeup.png" alt="testimoni1" />
+          </div>
+          <p>
+            Makeup aku sekarang kelihatan lebih profesional dan natural. -
+            <span class="name">Lala</span>
+          </p>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-imgs">
+            <img src="testimakeup2.png" alt="testimoni2" />
+          </div>
+          <p>
+            Coach dari Bliss bantu aku pilih produk Makeup sesuai kulit
+            sensitifku. - <span class="name">Mey</span>
+          </p>
+        </div>
+      </div>
+
+      <a
+        class="cta-btn"
+        href="https://wa.me/6281234567890?text=Halo%2C%20saya%20tertarik%20dengan%20konsultasi%20makeup%20dari%20Bliss"
+      >
+        HUBUNGI KAMI VIA WHATSAPP
+      </a>
+    </div>
+    <footer>
+      <div class="upper-footer">
+        <div class="bliss">
+          <img src="BLISSback.png" alt="LOGOBLISS" />
+          <p>Beauty, Love, Inspiration, Skin and Style</p>
+        </div>
+        <div class="hukumtautan">
+          <div class="hukum">
+            <h5>Hukum</h5>
+            <ul>
+              <li>Kebijakan</li>
+              <li>Syarat & Ketentuan</li>
+            </ul>
+          </div>
+          <div class="tautancepat">
+            <h5>Tautan Cepat</h5>
+            <ul>
+              <li><a href="#content">Beranda</a></li>
+              <li><a href="#layanan">Layanan</a></li>
+              <li><a href="#tentang">Tentang Kami</a></li>
+              <li><a href="#kontak">Kontak</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2025 Bliss. All rights reserved.</div>
+    </footer>
+    <button id="scrollToTop" onclick="scrollToTop()">&#8593;</button>
+    <script src="script.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const userLogin = sessionStorage.getItem("userLogin");
+        const profileContent = document.getElementById("profile-content");
+
+        if (userLogin) {
+          // Tampilkan nama pengguna sebagai teks
+          profileContent.innerHTML = `
+            <span style="color: #000; font-weight: bold; font-size: 16px;">${userLogin}</span>
+          `;
+        } else {
+          // Jika tidak login, tampilkan foto profil default
+          profileContent.innerHTML = `
+            <img src="assets/levipp.jpg" alt="Foto Profil" class="profil-img" />
+          `;
+        }
+      });
+    </script>
+    <script src="navbar.js"></script>
+  </body>
+</html>

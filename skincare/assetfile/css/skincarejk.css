@@ -2,16 +2,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Amiri", serif;
 }
 
 body {
   background: url("../../BACKGROUND.png") no-repeat center center fixed;
   background-size: cover;
   color: #4a216f;
+  font-family: "Poppins", sans-serif;
 }
 
 /* NAVBAR */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -30,6 +31,7 @@ body {
 .navigasi {
   display: flex;
   list-style: none;
+  font-family: "Amiri", serif;
 }
 
 .navigasi li {
@@ -54,26 +56,69 @@ body {
 .navigasi .nav a {
   color: #000;
 }
+
 .profil {
-  display: flex;
-  align-items: center;
-  padding: 0 10px;
-  margin-top: 4px;
+  position: relative;
+  display: inline-block;
 }
 
-.profil a {
-  display: flex;
+#user-name {
+  display: inline-flex;
   align-items: center;
+  padding: 10px 20px;
+  background-color: #b191f6;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
 }
 
-.profil img.profil-img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  display: block;
-  margin-top: -5px;
+#user-name i {
+  margin-right: 8px;
+}
+
+.logout {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  min-width: 150px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  transition: opacity 0.3s ease;
+}
+
+.logout a {
+  display: flex;
+  align-items: center;
+  padding: 12px 18px;
+  color: black;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.logout a i {
+  margin-right: 10px;
+  color: #a259ff;
+  font-size: 18px;
+}
+
+.logout a:hover {
+  background-color: #f0f0f0;
+}
+
+.profil:hover .logout {
+  visibility: visible;
+  opacity: 1;
 }
 
 h2 {
@@ -135,7 +180,7 @@ h2 {
   width: 100%;
   padding: 20px;
   text-align: center;
-  height: 520px;
+  height: 560px;
   position: relative;
 }
 
@@ -153,13 +198,15 @@ h2 {
   line-height: 1;
   font-size: 14px;
   color: #000;
+  text-align: center;
 }
 
 .deskripsi-produk {
   font-family: "Poppins", sans-serif;
-  line-height: 1;
+  line-height: 1.25;
   font-size: 14px;
   color: #000;
+  text-align: justify;
 }
 
 .product-card .product-image {
@@ -217,7 +264,7 @@ footer .hukumtautan {
   justify-content: flex-end;
   max-width: 600px;
   margin-left: auto;
-  margin-right: 40px; /* jarak dari pinggir kanan */
+  margin-right: 40px;
   gap: 40px;
 }
 

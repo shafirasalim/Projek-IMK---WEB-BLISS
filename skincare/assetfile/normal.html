@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BLISS | SKINCARE | NORMAL</title>
     <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
       rel="stylesheet"
     />
@@ -16,37 +20,45 @@
       href="https://fonts.googleapis.com/css2?family=Amiri&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/skincarejk.css" />
   </head>
   <body>
     <nav class="navbar">
       <div class="logo">
-        <img src="../assets/BLISSback.png" alt="LOGO BLISS" />
+        <img src="../assets/BLISSback.png" alt="Logo Bliss" />
       </div>
       <ul class="navigasi">
         <li class="nav">
           <a href="../../indexberandaafterlogin.html#content">BERANDA</a>
         </li>
         <li class="nav">
-          <a href="../../indexberandaafterlogin.html#layanan">LAYANAN</a>
+          <a href="../../navbarcontent/layanan.html#layanan">LAYANAN</a>
         </li>
         <li class="nav">
-          <a href="../../indexberandaafterlogin.html#kontak">KONTAK</a>
+          <a href="../../navbarcontent/kontak.html#kontak">KONTAK</a>
         </li>
         <li class="nav">
-          <a href="../../indexberandaafterlogin.html#tentang">TENTANG</a>
+          <a href="../../navbarcontent/tentangkami.html#tentang">TENTANG</a>
         </li>
-        <li class="profil">
-          <a href="#">
-            <img
-              src="../assets/levipp.jpg"
-              alt="Foto Profil"
-              class="profil-img"
-            />
-          </a>
+        <li class="profil user-menu">
+          <span id="user-name"><i class="fa fa-user"></i> Nama User</span>
+          <div id="logout" class="logout">
+            <a href="#" onclick="logout()"
+              ><i class="fa fa-sign-out"></i> Logout</a
+            >
+          </div>
         </li>
       </ul>
     </nav>
+
     <h2>Khusus Untukmu, Sesuai <br />dengan Kulit Normalmu 💖</h2>
     <div class="products">
       <!-- CARD 1 -->
@@ -64,13 +76,14 @@
             alt="Face Wash"
           />
           <p class="judul-produk">
-            Heartleaf + 8X NMF Amino Calm & Soothe Gel Cleanser
+            Pembersih dengan Heartleaf & Amino untuk Kulit Normal
           </p>
           <p class="deskripsi-produk">
-            Pembersih lembut untuk kulit normal, menjaga kesegaran dan
-            keseimbangan. Dengan ekstrak Heartleaf untuk menenangkan iritasi dan
-            8x NMF Amino Complex untuk hidrasi optimal. Formula gel ringan
-            mengangkat kotoran tanpa merusak kelembapan alami kulit.
+            Pilih pembersih wajah yang lembut dengan kandungan seperti ekstrak
+            tumbuhan penenang (misalnya heartleaf) dan kompleks NMF (Natural
+            Moisturizing Factor) dari asam amino. Kandungan ini membantu menjaga
+            kelembapan alami kulit sekaligus membersihkan kotoran tanpa membuat
+            kulit kering.
           </p>
         </div>
       </div>
@@ -90,13 +103,14 @@
             alt="Serum"
           />
           <p class="judul-produk">
-            Wardah SymBright + 10% Niacinamide Bright & Barrier Repair Serum
+            Serum Niacinamide & SymRadiance untuk Kulit Normal
           </p>
           <p class="deskripsi-produk">
-            Serum ringan yang cepat meresap, dirancang untuk menjaga kulit
-            normal tetap bersih, sehat, dan bercahaya alami. Dengan
-            SymRadiance399, mencerahkan kulit 2x lebih efektif, sementara 10%
-            Niacinamide ADV menyamarkan noda gelap dan meratakan warna kulit.
+            Pilih serum dengan kandungan SymRadiance399 yang membantu
+            mencerahkan kulit lebih efektif, serta 10% Niacinamide untuk
+            membantu menyamarkan noda gelap dan meratakan warna kulit. Serum ini
+            ringan, cepat meresap, dan menjaga kulit tetap sehat serta bercahaya
+            alami.
           </p>
         </div>
       </div>
@@ -116,13 +130,13 @@
             alt="Moisturizer"
           />
           <p class="judul-produk">
-            Wardah SymBright + 5% Niacinamide Bright & Barrier Booster Moisture
-            Gel
+            Pelembap dengan kandungan Niacinamide & SymRadiance
           </p>
           <p class="deskripsi-produk">
-            Pelembap ringan yang cepat meresap, menjaga kulit normal tetap
-            terhidrasi, bercahaya, dan kuat tanpa rasa berminyak. Tekstur gelnya
-            mengunci kelembapan sambil meningkatkan kilau alami kulit.
+            Pilih pelembap dengan kandungan SymRadiance399 dan 5% Niacinamide
+            yang membantu menjaga kulit tetap terhidrasi, bercahaya, dan kuat
+            tanpa rasa berminyak. Tekstur gelnya mengunci kelembapan sambil
+            meningkatkan kilau alami kulit.
           </p>
         </div>
       </div>
@@ -142,15 +156,16 @@
             alt="Sunscreen"
           />
           <p class="judul-produk">
-            Wardah UV Shield Aqua Fresh Essence SPF 50 PA++++
+            Sunscreen SPF 50 dengan Niacinamide & Hyaluronic Acid untuk Kulit
+            Normal
           </p>
 
           <p class="deskripsi-produk">
-            Sunscreen segar bebas alkohol yang memberikan perlindungan UV
-            optimal 50x sambil menjaga kulit tetap terhidrasi dan nyaman
-            sepanjang hari. Formula ultra-ringan dan tidak berminyaknya meresap
-            cepat, membuatnya sempurna untuk pemakaian sehari-hari—bahkan di
-            bawah riasan!
+            Pilih sunscreen dengan perlindungan UV SPF 50 yang mengandung
+            Niacinamide untuk menenangkan kulit dan Hyaluronic Acid untuk
+            menjaga kelembapan. Formula bebas alkohol ini memberikan
+            perlindungan optimal sambil meresap cepat, menjaga kulit tetap
+            terhidrasi dan nyaman sepanjang hari.
           </p>
         </div>
       </div>
@@ -159,7 +174,7 @@
     <footer>
       <div class="upper-footer">
         <div class="bliss">
-          <img src="../assets/BLISSback.png" alt="" />
+          <img src="../assets/BLISSback.png" alt="LOGOBLISS" />
           <p>Beauty, Love, Inspiration, Skin and Style</p>
         </div>
         <div class="hukumtautan">
@@ -176,16 +191,14 @@
               <li>
                 <a href="../../indexberandaafterlogin.html#content">Beranda</a>
               </li>
-              <li>
-                <a href="../../indexberandaafterlogin.html#layanan">Layanan</a>
+              <li class="nav">
+                <a href="../../navbarcontent/layanan.html#layanan">Layanan</a>
               </li>
-              <li>
-                <a href="../../indexberandaafterlogin.html#tentang"
-                  >Tentang Kami</a
-                >
+              <li class="nav">
+                <a href="../../navbarcontent/kontak.html#kontak">Kontak</a>
               </li>
-              <li>
-                <a href="../../indexberandaafterlogin.html#kontak">Kontak</a>
+              <li class="nav">
+                <a href="../../navbarcontent/tentangkami.html">Tentang</a>
               </li>
             </ul>
           </div>
@@ -195,5 +208,24 @@
     </footer>
     <button id="scrollToTop" onclick="scrollToTop()">&#8593;</button>
     <script src="../script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const userLogin = sessionStorage.getItem("userLogin");
+        const profileContent = document.getElementById("profile-content");
+
+        if (userLogin) {
+          // Tampilkan nama pengguna sebagai teks
+          profileContent.innerHTML = `
+            <span style="color: #000; font-weight: bold; font-size: 16px;">${userLogin}</span>
+          `;
+        } else {
+          // Jika tidak login, tampilkan foto profil default
+          profileContent.innerHTML = `
+            <img src="assets/levipp.jpg" alt="Foto Profil" class="profil-img" />
+          `;
+        }
+      });
+    </script>
+    <script src="navbar.js"></script>
   </body>
 </html>

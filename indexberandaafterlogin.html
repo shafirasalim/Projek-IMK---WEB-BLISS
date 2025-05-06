@@ -24,23 +24,38 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
     <link rel="stylesheet" href="css/berandaafterlogin.css" />
   </head>
   <body>
     <nav class="navbar">
       <div class="logo">
-        <img src="assets/BLISSback.png" alt="LOGO BLISS" />
+        <img src="assets/BLISSback.png" alt="Logo Bliss" />
       </div>
       <ul class="navigasi">
-        <li class="nav"><a href="#content">BERANDA</a></li>
-        <li class="nav"><a href="#layanan">LAYANAN</a></li>
-        <li class="nav"><a href="#kontak">KONTAK</a></li>
-        <li class="nav"><a href="#tentang">TENTANG</a></li>
+        <li class="nav">
+          <a href="indexberandaafterlogin.html#content">BERANDA</a>
+        </li>
+        <li class="nav">
+          <a href="indexberandaafterlogin.html#layanan">LAYANAN</a>
+        </li>
+        <li class="nav">
+          <a href="indexberandaafterlogin.html#kontak">KONTAK</a>
+        </li>
+        <li class="nav">
+          <a href="indexberandaafterlogin.html#tentang">TENTANG</a>
+        </li>
         <li class="profil">
-          <a href="#">
-            <img src="assets/levipp.jpg" alt="Foto Profil" class="profil-img" />
-          </a>
+          <div id="user-name"><i class="fa fa-user"></i> Nama User</div>
+          <div id="logout" class="logout">
+            <a href="#" onclick="logout()">
+              <i class="fa fa-sign-out"></i> Logout
+            </a>
+          </div>
         </li>
       </ul>
     </nav>
@@ -54,18 +69,23 @@
           and <span class="huruf-khusus">S</span>tyle
         </h1>
 
-        <p>
-          <span class="highlight">BLISS</span> adalah platform andalan Anda
-          untuk <br />menemukan perawatan kulit, perawatan <br />tubuh, fashion,
-          dan gaya yang benar-benar <br />sesuai dengan diri Anda. Kami percaya
-          bahwa <br />kecantikan bukan hanya tentang penampilan, <br />—tetapi
-          juga tentang merasa nyaman dan <br />percaya diri dengan diri sendiri.
+        <p class="content">
+          <span class="highlight-with-icon">
+            <img src="assets/bunga.png" alt="ikon bunga" class="icon-overlay" />
+            <span class="highlight">Bliss</span>
+          </span>
+          adalah platform andalan Anda untuk menemukan
+          <strong>perawatan kulit, perawatan tubuh, fashion, dan gaya</strong>
+          yang benar-benar sesuai dengan diri Anda. Kami percaya bahwa
+          kecantikan bukan hanya tentang penampilan—tetapi juga tentang merasa
+          nyaman dan percaya diri dengan diri sendiri.
         </p>
+
         <div class="buttons">
           <a href="#kategori-ikon">
             <button class="read-more">SELENGKAPNYA</button>
           </a>
-          <a href="login.html">
+          <a href="indexlogin.html">
             <button class="get-started">AYO MULAI!</button>
           </a>
         </div>
@@ -80,9 +100,21 @@
       <img src="assets/layanan.png" alt="Ilustrasi Layanan" />
       <div class="layanan-box">
         <ul class="layanan-list">
-          <li>1. Konsultasi Kecantikan & Perawatan Kulit Pribadi</li>
-          <li>2. Panduan Tips Skincare & Kecantikan</li>
-          <li>3. Panduan Fashion, Outfit & Kecantikan</li>
+          <li>
+            <a href="layanan/konsultasiskincare.html"
+              >1. Konsultasi Kecantikan dan Perawatan Kulit Pribadi</a
+            >
+          </li>
+          <li>
+            <a href="layanan/konsultasimakeup.html"
+              >2. Panduan Lengkap Tips Makeup Sesuai Wajahmu</a
+            >
+          </li>
+          <li>
+            <a href="layanan/konsultasioutfit.html"
+              >3. Panduan Gaya Berpakaian yang Stylish</a
+            >
+          </li>
         </ul>
       </div>
     </section>
@@ -281,17 +313,24 @@
             <h3>Hubungi Kami</h3>
             <p>
               Jangan ragu untuk menghubungi
-              <br />kami kapan Kami akan segera <br />membalas Anda!
+              <br />kami kapan saja. Kami akan <br />
+              segera membalas Anda!
             </p>
-            <form action="#">
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <input
+                type="hidden"
+                name="access_key"
+                value="3346b4e9-3bec-4547-85d7-20e1ff3dcdb0"
+              />
+
               <label for="nama">Nama</label>
-              <input type="text" id="nama" required />
+              <input type="text" id="nama" name="nama" required />
 
               <label for="email">Alamat Email</label>
-              <input type="email" id="email" required />
+              <input type="email" id="email" name="email" required />
 
               <label for="pesan">Pesan</label>
-              <textarea id="pesan" rows="1" required></textarea>
+              <textarea id="pesan" name="pesan" rows="1" required></textarea>
 
               <button type="submit">KIRIM</button>
             </form>
@@ -312,22 +351,27 @@
             <div class="sosial-ikon">
               <h3>Media Sosial</h3>
               <div class="logo-sosmed">
-                <a href="#"
-                  ><img src="assets/instagramlogo.png" alt="Instagram"
-                /></a>
-                <a href="#"><img src="assets/fblogo.png" alt="Facebook" /></a>
-                <a href="#"><img src="assets/redditlogo.png" alt="Reddit" /></a>
-                <a href="#"
-                  ><img src="assets/twitterlogo.png" alt="Twitter"
-                /></a>
-                <a href="#"><img src="assets/tiktoklogo.png" alt="Tiktok" /></a>
+                <a href="https://www.instagram.com" target="_blank">
+                  <img src="assets/instagramlogo.png" alt="Instagram" />
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                  <img src="assets/fblogo.png" alt="Facebook" />
+                </a>
+                <a href="https://www.reddit.com" target="_blank">
+                  <img src="assets/redditlogo.png" alt="Reddit" />
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                  <img src="assets/twitterlogo.png" alt="Twitter" />
+                </a>
+                <a href="https://www.tiktok.com" target="_blank">
+                  <img src="assets/tiktoklogo.png" alt="Tiktok" />
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
     <footer>
       <div class="upper-footer">
         <div class="bliss">
@@ -357,5 +401,24 @@
     </footer>
     <button id="scrollToTop" onclick="scrollToTop()">&#8593;</button>
     <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const userLogin = sessionStorage.getItem("userLogin");
+        const profileContent = document.getElementById("profile-content");
+
+        if (userLogin) {
+          // Tampilkan nama pengguna sebagai teks
+          profileContent.innerHTML = `
+            <span style="color: #000; font-weight: bold; font-size: 16px;">${userLogin}</span>
+          `;
+        } else {
+          // Jika tidak login, tampilkan foto profil default
+          profileContent.innerHTML = `
+            <img src="assets/levipp.jpg" alt="Foto Profil" class="profil-img" />
+          `;
+        }
+      });
+    </script>
+    <script src="navbar.js"></script>
   </body>
 </html>

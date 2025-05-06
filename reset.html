@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Reset Kata Sandi | BLISS</title>
+    <link rel="stylesheet" href="css/resetstyle.css" />
+  </head>
+  <body>
+    <div class="reset-container">
+      <h2>Reset Kata Sandi</h2>
+      <form onsubmit="handleReset(event)">
+        <label for="email">Masukkan Email Anda</label>
+        <input type="email" id="email" required />
+
+        <button type="submit">Kirim Tautan Reset</button>
+      </form>
+      <p><a href="login.html">Kembali ke Login</a></p>
+    </div>
+
+    <script>
+      function handleReset(e) {
+        e.preventDefault();
+        const email = document.getElementById("email").value.trim();
+
+        if (email) {
+          alert("Tautan untuk reset kata sandi dikirim ke: " + email);
+          // Simulasi kirim email (tidak benar-benar mengirim email)
+        } else {
+          alert("Masukkan email yang valid.");
+        }
+      }
+    </script>
+  </body>
+</html>

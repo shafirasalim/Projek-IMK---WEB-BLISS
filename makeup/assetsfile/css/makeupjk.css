@@ -7,11 +7,12 @@
 body {
   background: url("../../BACKGROUND.png") no-repeat center center fixed;
   background-size: cover;
-  font-family: "Amiri", serif;
   color: #4a216f;
+  font-family: "Poppins", sans-serif;
 }
 
 /* NAVBAR */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -30,10 +31,12 @@ body {
 .navigasi {
   display: flex;
   list-style: none;
+  font-family: "Amiri", serif;
 }
 
 .navigasi li {
   margin: 0 13px;
+  font-size: 16px;
 }
 
 .navigasi .nav a {
@@ -53,30 +56,73 @@ body {
 .navigasi .nav a {
   color: #000;
 }
+
 .profil {
-  display: flex;
-  align-items: center;
-  padding: 0 10px;
-  margin-top: 4px;
+  position: relative;
+  display: inline-block;
 }
 
-.profil a {
-  display: flex;
+#user-name {
+  display: inline-flex;
   align-items: center;
+  padding: 10px 20px;
+  background-color: #b191f6;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
 }
 
-.profil img.profil-img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  display: block;
-  margin-top: -5px;
+#user-name i {
+  margin-right: 8px;
+}
+
+.logout {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  min-width: 150px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  transition: opacity 0.3s ease;
+}
+
+.logout a {
+  display: flex;
+  align-items: center;
+  padding: 12px 18px;
+  color: black;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.logout a i {
+  margin-right: 10px;
+  color: #a259ff;
+  font-size: 18px;
+}
+
+.logout a:hover {
+  background-color: #f0f0f0;
+}
+
+.profil:hover .logout {
+  visibility: visible;
+  opacity: 1;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 40px;
   margin: 30px 70px;
   letter-spacing: 2px;
   line-height: 1.5;
@@ -204,6 +250,7 @@ h2 {
   line-height: 1;
   font-size: 14px;
   color: #000;
+  text-align: center;
 }
 .product-card .product-image {
   width: 70px;
@@ -216,6 +263,8 @@ h2 {
   font-size: 18px;
   color: black;
 }
+/* footer */
+/* footer */
 
 footer {
   background-color: white;
@@ -258,7 +307,7 @@ footer .hukumtautan {
   justify-content: flex-end;
   max-width: 600px;
   margin-left: auto;
-  margin-right: 40px; /* jarak dari pinggir kanan */
+  margin-right: 40px;
   gap: 40px;
 }
 
@@ -303,7 +352,7 @@ footer li {
 .footer-bottom {
   width: 100%;
   text-align: center;
-  font-size: 16px;
+  font-size: 15px;
   color: black;
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
@@ -346,4 +395,64 @@ footer li {
 #scrollToTop:hover {
   opacity: 1;
   transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  #scrollTopBtn {
+    bottom: 15px;
+    right: 15px;
+    padding: 10px 14px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .kontak-container {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .kontak-form,
+  .kontak-info {
+    padding: 15px;
+  }
+
+  .kontak-info h4 {
+    text-align: center;
+  }
+
+  .kontak-info p,
+  .kontak-info .sosial-media {
+    text-align: center;
+  }
+
+  .sosial-media a {
+    margin: 0 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .kontak-box {
+    border-radius: 20px;
+    padding: 15px;
+  }
+
+  .kontak-form input,
+  .kontak-form textarea {
+    font-size: 14px;
+  }
+
+  .kontak-form button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .kontak-info h4 {
+    font-size: 18px;
+  }
+
+  .sosial-media a {
+    font-size: 18px;
+  }
 }

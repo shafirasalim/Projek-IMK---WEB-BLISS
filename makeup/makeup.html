@@ -24,6 +24,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="makeupstyle.css" />
   </head>
   <body>
@@ -33,21 +37,24 @@
       </div>
       <ul class="navigasi">
         <li class="nav">
-          <a href="../../indexberandaafterlogin.html#content">BERANDA</a>
+          <a href="../indexberandaafterlogin.html#content">BERANDA</a>
         </li>
         <li class="nav">
-          <a href="../../indexberandaafterlogin.html#layanan">LAYANAN</a>
+          <a href="../navbarcontent/layanan.html#layanan">LAYANAN</a>
         </li>
         <li class="nav">
-          <a href="../../indexberandaafterlogin.html#kontak">KONTAK</a>
+          <a href="../navbarcontent/kontak.html#kontak">KONTAK</a>
         </li>
         <li class="nav">
-          <a href="../../indexberandaafterlogin.html#tentang">TENTANG</a>
+          <a href="../navbarcontent/tentangkami.html#tentang">TENTANG</a>
         </li>
-        <li class="profil">
-          <a href="#">
-            <img src="assets/levipp.jpg" alt="Foto Profil" class="profil-img" />
-          </a>
+        <li class="profil user-menu">
+          <span id="user-name"><i class="fa fa-user"></i> Nama User</span>
+          <div id="logout" class="logout">
+            <a href="#" onclick="logout()"
+              ><i class="fa fa-sign-out"></i> Logout</a
+            >
+          </div>
         </li>
       </ul>
     </nav>
@@ -320,19 +327,17 @@
           <div class="tautancepat">
             <h5>Tautan Cepat</h5>
             <ul>
-              <li>
-                <a href="../../indexberandaafterlogin.html#content">Beranda</a>
+              <li class="nav">
+                <a href="../indexberandaafterlogin.html#content">Beranda</a>
               </li>
-              <li>
-                <a href="../../indexberandaafterlogin.html#layanan">Layanan</a>
+              <li class="nav">
+                <a href="../navbarcontent/layanan.html#layanan">Layanan</a>
               </li>
-              <li>
-                <a href="../../indexberandaafterlogin.html#tentang"
-                  >Tentang Kami</a
-                >
+              <li class="nav">
+                <a href="../navbarcontent/kontak.html#kontak">Kontak</a>
               </li>
-              <li>
-                <a href="../../indexberandaafterlogin.html#kontak">Kontak</a>
+              <li class="nav">
+                <a href="../navbarcontent/tentangkami.html#tentang">Tentang</a>
               </li>
             </ul>
           </div>
@@ -342,5 +347,26 @@
     </footer>
     <button id="scrollToTop" onclick="scrollToTop()">&#8593;</button>
     <script src="../script.js"></script>
+    <button id="scrollToTop" onclick="scrollToTop()">&#8593;</button>
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const userLogin = sessionStorage.getItem("userLogin");
+        const profileContent = document.getElementById("profile-content");
+
+        if (userLogin) {
+          // Tampilkan nama pengguna sebagai teks
+          profileContent.innerHTML = `
+            <span style="color: #000; font-weight: bold; font-size: 16px;">${userLogin}</span>
+          `;
+        } else {
+          // Jika tidak login, tampilkan foto profil default
+          profileContent.innerHTML = `
+            <img src="assets/levipp.jpg" alt="Foto Profil" class="profil-img" />
+          `;
+        }
+      });
+    </script>
+    <script src="navbar.js"></script>
   </body>
 </html>

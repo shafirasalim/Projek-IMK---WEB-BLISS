@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BLISS | MAKEUP | NEUTRAL</title>
     <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
       rel="stylesheet"
     />
@@ -16,34 +20,41 @@
       href="https://fonts.googleapis.com/css2?family=Amiri&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/makeupjk.css" />
   </head>
   <body>
     <nav class="navbar">
       <div class="logo">
-        <img src="../assets/BLISSback.png" alt="LOGO BLISS" />
+        <img src="../assets/BLISSback.png" alt="Logo Bliss" />
       </div>
       <ul class="navigasi">
         <li class="nav">
           <a href="../../indexberandaafterlogin.html#content">BERANDA</a>
         </li>
         <li class="nav">
-          <a href="../../indexberandaafterlogin.html#layanan">LAYANAN</a>
+          <a href="../../navbarcontent/layanan.html#layanan">LAYANAN</a>
         </li>
         <li class="nav">
-          <a href="../../indexberandaafterlogin.html#kontak">KONTAK</a>
+          <a href="../../navbarcontent/kontak.html#kontak">KONTAK</a>
         </li>
         <li class="nav">
-          <a href="../../indexberandaafterlogin.html#tentang">TENTANG</a>
+          <a href="../../navbarcontent/tentangkami.html#tentang">TENTANG</a>
         </li>
-        <li class="profil">
-          <a href="#">
-            <img
-              src="../assets/levipp.jpg"
-              alt="Foto Profil"
-              class="profil-img"
-            />
-          </a>
+        <li class="profil user-menu">
+          <span id="user-name"><i class="fa fa-user"></i> Nama User</span>
+          <div id="logout" class="logout">
+            <a href="#" onclick="logout()"
+              ><i class="fa fa-sign-out"></i> Logout</a
+            >
+          </div>
         </li>
       </ul>
     </nav>
@@ -68,7 +79,8 @@
               alt="Eye Shadow"
             />
             <p class="judul-produk">
-              MAKE OVER X Tities Sapoetra Eye Shadow: Prairie
+              Warna netral earthy, seperti cokelat dan beige, cocok untuk
+              tampilan alami.
             </p>
           </div>
         </div>
@@ -95,7 +107,7 @@
               alt="Maskara"
             />
             <p class="judul-produk">
-              MAKE OVER Lash Impulse Waterproof Mascara
+              Warna gelap tahan lama untuk definisi mata yang natural.
             </p>
           </div>
         </div>
@@ -114,7 +126,8 @@
               alt="Lipstick"
             />
             <p class="judul-produk">
-              Make Over Color Hypnose Creamy Lipmatte: 12 Magnet
+              Lipmatte dengan warna merah bata atau nude untuk keseimbangan
+              warna.
             </p>
           </div>
         </div>
@@ -133,7 +146,7 @@
               alt="Foundation"
             />
             <p class="judul-produk">
-              MAKE OVER Powerstay 24H Weightless Liquid Foundation
+              Formula yang menyatu dengan kulit tanpa efek kuning atau pink.
             </p>
           </div>
         </div>
@@ -152,7 +165,7 @@
               alt="Blush On"
             />
             <p class="judul-produk">
-              MAKE OVER Hydrastay Liquid Tint Blush: Sun Backed
+              Blush peach atau dusty rose yang memberikan rona segar alami.
             </p>
           </div>
         </div>
@@ -162,7 +175,7 @@
     <footer>
       <div class="upper-footer">
         <div class="bliss">
-          <img src="../assets/BLISSback.png" alt="" />
+          <img src="../assets/BLISSback.png" alt="LOGOBLISS" />
           <p>Beauty, Love, Inspiration, Skin and Style</p>
         </div>
         <div class="hukumtautan">
@@ -179,14 +192,14 @@
               <li>
                 <a href="../../indexberandaafterlogin.html#content">Beranda</a>
               </li>
-              <li>
-                <a href="../../indexberandaafterlogin.html#layanan">Layanan</a>
+              <li class="nav">
+                <a href="../../navbarcontent/layanan.html#layanan">Layanan</a>
               </li>
-              <li>
-                <a href="../../indexberandaafterlogin.html">Tentang Kami</a>
+              <li class="nav">
+                <a href="../../navbarcontent/kontak.html#kontak">Kontak</a>
               </li>
-              <li>
-                <a href="../../indexberandaafterlogin.html#kontak">Kontak</a>
+              <li class="nav">
+                <a href="../../navbarcontent/tentangkami.html">Tentang</a>
               </li>
             </ul>
           </div>
@@ -196,5 +209,24 @@
     </footer>
     <button id="scrollToTop" onclick="scrollToTop()">&#8593;</button>
     <script src="../script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const userLogin = sessionStorage.getItem("userLogin");
+        const profileContent = document.getElementById("profile-content");
+
+        if (userLogin) {
+          // Tampilkan nama pengguna sebagai teks
+          profileContent.innerHTML = `
+            <span style="color: #000; font-weight: bold; font-size: 16px;">${userLogin}</span>
+          `;
+        } else {
+          // Jika tidak login, tampilkan foto profil default
+          profileContent.innerHTML = `
+            <img src="assets/levipp.jpg" alt="Foto Profil" class="profil-img" />
+          `;
+        }
+      });
+    </script>
+    <script src="navbar.js"></script>
   </body>
 </html>

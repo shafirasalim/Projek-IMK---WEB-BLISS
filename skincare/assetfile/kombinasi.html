@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BLISS | SKINCARE | KOMBINASI</title>
     <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
       rel="stylesheet"
     />
@@ -16,34 +20,41 @@
       href="https://fonts.googleapis.com/css2?family=Amiri&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/skincarejk.css" />
   </head>
   <body>
     <nav class="navbar">
       <div class="logo">
-        <img src="../assets/BLISSback.png" alt="LOGO BLISS" />
+        <img src="../assets/BLISSback.png" alt="Logo Bliss" />
       </div>
       <ul class="navigasi">
         <li class="nav">
           <a href="../../indexberandaafterlogin.html#content">BERANDA</a>
         </li>
         <li class="nav">
-          <a href="../../indexberandaafterlogin.html#layanan">LAYANAN</a>
+          <a href="../../navbarcontent/layanan.html#layanan">LAYANAN</a>
         </li>
         <li class="nav">
-          <a href="../../indexberandaafterlogin.html#kontak">KONTAK</a>
+          <a href="../../navbarcontent/kontak.html#kontak">KONTAK</a>
         </li>
         <li class="nav">
-          <a href="../../indexberandaafterlogin.html#tentang">TENTANG</a>
+          <a href="../../navbarcontent/tentangkami.html#tentang">TENTANG</a>
         </li>
-        <li class="profil">
-          <a href="#">
-            <img
-              src="../assets/levipp.jpg"
-              alt="Foto Profil"
-              class="profil-img"
-            />
-          </a>
+        <li class="profil user-menu">
+          <span id="user-name"><i class="fa fa-user"></i> Nama User</span>
+          <div id="logout" class="logout">
+            <a href="#" onclick="logout()"
+              ><i class="fa fa-sign-out"></i> Logout</a
+            >
+          </div>
         </li>
       </ul>
     </nav>
@@ -64,16 +75,15 @@
             alt="Face Wash"
           />
           <p class="judul-produk">
-            CeraVe Foaming Facial Cleanser – Gentle & Balancing for Combination
-            Skin
+            Pencuci Muka dengan Ceramide, Niacinamide & Asam Hialuronat
           </p>
           <p class="deskripsi-produk">
-            Pembersih busa yang menyegarkan ini sangat cocok untuk kulit normal
-            hingga berminyak, karena efektif mengangkat kotoran, minyak, dan
-            impuritas tanpa mengganggu skin barrier. Diperkaya dengan ceramide,
-            asam hialuronat, dan niacinamide, produk ini membantu mengembalikan
-            hidrasi, mengontrol minyak berlebih, dan menenangkan kulit, membuat
-            wajah terasa bersih, segar, dan nyaman.
+            Kulit kombinasi membutuhkan pembersih yang bisa mengangkat kotoran
+            dan minyak tanpa membuat area kering terasa tertarik. Ceramide
+            membantu menjaga skin barrier tetap utuh, Niacinamide menenangkan
+            serta mengontrol produksi sebum, dan Asam Hialuronat memastikan
+            kelembapan tetap terjaga—menjadikan kulit terasa bersih, segar, dan
+            seimbang.
           </p>
         </div>
       </div>
@@ -93,13 +103,14 @@
             alt="Serum"
           />
           <p class="judul-produk">
-            CeraVe Hydrating Hyaluronic Acid Serum Lasting Moisture
+            Serum: Hyaluronic Acid, Vitamin B5 & Ceramide
           </p>
           <p class="deskripsi-produk">
-            Serum yang cepat meresap dan tidak lengket, dengan Hyaluronic Acid
-            untuk mengunci kelembapan, Vitamin B5 untuk menenangkan kulit, dan
-            Ceramide untuk memperkuat skin barrier—menjaga kulit kombinasi tetap
-            terhidrasi, halus, dan seimbang sepanjang hari.
+            Untuk menjaga kelembapan di area kering tanpa membuat area berminyak
+            terasa berat, Hyaluronic Acid bekerja menarik air ke dalam lapisan
+            kulit, Vitamin B5 menenangkan dan mempercepat regenerasi, sedangkan
+            Ceramide memperkuat pelindung alami kulit. Kombinasi ini cocok untuk
+            menjaga hidrasi merata dan menstabilkan kondisi kulit kombinasi.
           </p>
         </div>
       </div>
@@ -119,16 +130,14 @@
             alt="Moisturizer"
           />
           <p class="judul-produk">
-            CeraVe Oil Control Moisturizing Gel-Cream – Hydration Without the
-            Shine
+            Pelembap disertai Teknologi Pengontrol Minyak & Tekstur Gel-Krim
           </p>
           <p class="deskripsi-produk">
-            Pelembap bertekstur gel-krim ini memberikan keseimbangan sempurna
-            antara hidrasi dan kontrol minyak. Diperkaya dengan teknologi
-            penyerap minyak, mengurangi kilau berlebih sambil memberikan
-            kelembapan tahan lama untuk kulit yang halus dan sehat. Teksturnya
-            yang ringan dan tidak lengket membuatnya ideal untuk penggunaan
-            sehari-hari, menjaga kulit tetap segar dan nyaman sepanjang hari.
+            Kulit kombinasi butuh hidrasi tanpa kilap. Formula gel-krim ringan
+            dengan teknologi pengontrol minyak memberikan kelembapan pada area
+            kering sekaligus mengurangi kilap di zona T. Kandungan seperti
+            Ceramide dan humektan membantu menjaga keseimbangan kulit tanpa rasa
+            berat atau lengket.
           </p>
         </div>
       </div>
@@ -148,16 +157,15 @@
             alt="Sunscreen"
           />
           <p class="judul-produk">
-            Hydrating Mineral Sunscreen SPF 30 – Sheer Tint for a Natural Glow
+            Sunscreen: Zinc Oxide, Titanium Dioxide & Tinted Moisture
           </p>
 
           <p class="deskripsi-produk">
-            Sunscreen berbasis mineral 100% dengan Titanium Dioxide dan Zinc
-            Oxide yang membentuk perlindungan terhadap sinar UVA/UVB. Diperkaya
-            bahan pelembap, menjaga kulit tetap terhidrasi sambil meratakan
-            warna kulit dengan sentuhan tint ringan. Tersedia dalam tiga shade
-            fleksibel (Light, Medium, Deep) untuk meningkatkan cahaya alami
-            Anda.
+            Kulit kombinasi cenderung sensitif dan memerlukan sunscreen
+            non-komedogenik berbasis mineral seperti Zinc Oxide dan Titanium
+            Dioxide. Tambahan pelembap dan tinted formula membantu meratakan
+            warna kulit secara alami tanpa menyumbat pori, menjadikannya ideal
+            untuk perlindungan harian yang tetap ringan dan menyatu di kulit.
           </p>
         </div>
       </div>
@@ -166,7 +174,7 @@
     <footer>
       <div class="upper-footer">
         <div class="bliss">
-          <img src="../assets/BLISSback.png" alt="" />
+          <img src="../assets/BLISSback.png" alt="LOGOBLISS" />
           <p>Beauty, Love, Inspiration, Skin and Style</p>
         </div>
         <div class="hukumtautan">
@@ -183,16 +191,14 @@
               <li>
                 <a href="../../indexberandaafterlogin.html#content">Beranda</a>
               </li>
-              <li>
-                <a href="../../indexberandaafterlogin.html#layanan">Layanan</a>
+              <li class="nav">
+                <a href="../../navbarcontent/layanan.html#layanan">Layanan</a>
               </li>
-              <li>
-                <a href="../../indexberandaafterlogin.html#tentang"
-                  >Tentang Kami</a
-                >
+              <li class="nav">
+                <a href="../../navbarcontent/kontak.html#kontak">Kontak</a>
               </li>
-              <li>
-                <a href="../../indexberandaafterlogin.html#kontak">Kontak</a>
+              <li class="nav">
+                <a href="../../navbarcontent/tentangkami.html">Tentang</a>
               </li>
             </ul>
           </div>
@@ -202,5 +208,24 @@
     </footer>
     <button id="scrollToTop" onclick="scrollToTop()">&#8593;</button>
     <script src="../script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const userLogin = sessionStorage.getItem("userLogin");
+        const profileContent = document.getElementById("profile-content");
+
+        if (userLogin) {
+          // Tampilkan nama pengguna sebagai teks
+          profileContent.innerHTML = `
+            <span style="color: #000; font-weight: bold; font-size: 16px;">${userLogin}</span>
+          `;
+        } else {
+          // Jika tidak login, tampilkan foto profil default
+          profileContent.innerHTML = `
+            <img src="assets/levipp.jpg" alt="Foto Profil" class="profil-img" />
+          `;
+        }
+      });
+    </script>
+    <script src="navbar.js"></script>
   </body>
 </html>

@@ -51,13 +51,18 @@
           and <span class="huruf-khusus">S</span>tyle
         </h1>
 
-        <p>
-          <span class="highlight">BLISS</span> adalah platform andalan Anda
-          untuk <br />menemukan perawatan kulit, perawatan <br />tubuh, fashion,
-          dan gaya yang benar-benar <br />sesuai dengan diri Anda. Kami percaya
-          bahwa <br />kecantikan bukan hanya tentang penampilan, <br />—tetapi
-          juga tentang merasa nyaman dan <br />percaya diri dengan diri sendiri.
+        <p class="content">
+          <span class="highlight-with-icon">
+            <img src="assets/bunga.png" alt="ikon bunga" class="icon-overlay" />
+            <span class="highlight">Bliss</span>
+          </span>
+          adalah platform andalan Anda untuk menemukan
+          <strong>perawatan kulit, perawatan tubuh, fashion, dan gaya</strong>
+          yang benar-benar sesuai dengan diri Anda. Kami percaya bahwa
+          kecantikan bukan hanya tentang penampilan—tetapi juga tentang merasa
+          nyaman dan percaya diri dengan diri sendiri.
         </p>
+
         <div class="buttons">
           <a href="#kategori-ikon">
             <button class="read-more">SELENGKAPNYA</button>
@@ -72,14 +77,36 @@
       </div>
     </header>
 
+    <!-- Modal Login -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p>Anda harus masuk untuk mengakses layanan ini. Mau masuk?</p>
+        <button class="modal-button" onclick="goToLogin()">Ya</button>
+        <button class="modal-button" onclick="closeModal()">Tidak</button>
+      </div>
+    </div>
+
     <section class="layanan" id="layanan">
       <h2>LAYANAN</h2>
       <img src="assets/layanan.png" alt="Ilustrasi Layanan" />
       <div class="layanan-box">
         <ul class="layanan-list">
-          <li>1. Konsultasi Kecantikan & Perawatan Kulit Pribadi</li>
-          <li>2. Panduan Tips Skincare & Kecantikan</li>
-          <li>3. Panduan Fashion, Outfit & Kecantikan</li>
+          <li>
+            <a href="#" onclick="showLoginWarning()"
+              >1. Konsultasi Kecantikan dan Perawatan Kulit Pribadi</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="showLoginWarning()"
+              >2. Panduan Lengkap Tips Makeup Sesuai Wajahmu</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="showLoginWarning()"
+              >3. Panduan Gaya Berpakaian yang Stylish</a
+            >
+          </li>
         </ul>
       </div>
     </section>
@@ -278,17 +305,24 @@
             <h3>Hubungi Kami</h3>
             <p>
               Jangan ragu untuk menghubungi
-              <br />kami kapan Kami akan segera <br />membalas Anda!
+              <br />kami kapan saja. Kami akan <br />
+              segera membalas Anda!
             </p>
-            <form action="#">
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <input
+                type="hidden"
+                name="access_key"
+                value="3346b4e9-3bec-4547-85d7-20e1ff3dcdb0"
+              />
+
               <label for="nama">Nama</label>
-              <input type="text" id="nama" required />
+              <input type="text" id="nama" name="nama" required />
 
               <label for="email">Alamat Email</label>
-              <input type="email" id="email" required />
+              <input type="email" id="email" name="email" required />
 
               <label for="pesan">Pesan</label>
-              <textarea id="pesan" rows="1" required></textarea>
+              <textarea id="pesan" name="pesan" rows="1" required></textarea>
 
               <button type="submit">KIRIM</button>
             </form>
@@ -309,15 +343,21 @@
             <div class="sosial-ikon">
               <h3>Media Sosial</h3>
               <div class="logo-sosmed">
-                <a href="#"
-                  ><img src="assets/instagramlogo.png" alt="Instagram"
-                /></a>
-                <a href="#"><img src="assets/fblogo.png" alt="Facebook" /></a>
-                <a href="#"><img src="assets/redditlogo.png" alt="Reddit" /></a>
-                <a href="#"
-                  ><img src="assets/twitterlogo.png" alt="Twitter"
-                /></a>
-                <a href="#"><img src="assets/tiktoklogo.png" alt="Tiktok" /></a>
+                <a href="https://www.instagram.com" target="_blank">
+                  <img src="assets/instagramlogo.png" alt="Instagram" />
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                  <img src="assets/fblogo.png" alt="Facebook" />
+                </a>
+                <a href="https://www.reddit.com" target="_blank">
+                  <img src="assets/redditlogo.png" alt="Reddit" />
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                  <img src="assets/twitterlogo.png" alt="Twitter" />
+                </a>
+                <a href="https://www.tiktok.com" target="_blank">
+                  <img src="assets/tiktoklogo.png" alt="Tiktok" />
+                </a>
               </div>
             </div>
           </div>
@@ -353,6 +393,23 @@
       <div class="footer-bottom">© 2025 Bliss. All rights reserved.</div>
     </footer>
     <button id="scrollToTop" onclick="scrollToTop()">&#8593;</button>
+    <script>
+      function showLoginWarning() {
+        // Menampilkan modal dengan transisi smooth
+        document.getElementById("loginModal").style.display = "block";
+      }
+
+      function closeModal() {
+        // Menutup modal
+        document.getElementById("loginModal").style.display = "none";
+      }
+
+      function goToLogin() {
+        // Mengarahkan ke halaman login
+        window.location.href = "login.html"; // Ganti dengan URL form login Anda
+      }
+    </script>
+
     <script src="script.js"></script>
   </body>
 </html>

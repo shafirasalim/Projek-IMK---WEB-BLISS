@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BLISS | SKINCARE | KERING</title>
     <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
       rel="stylesheet"
     />
@@ -16,34 +20,41 @@
       href="https://fonts.googleapis.com/css2?family=Amiri&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/skincarejk.css" />
   </head>
   <body>
     <nav class="navbar">
       <div class="logo">
-        <img src="../assets/BLISSback.png" alt="LOGO BLISS" />
+        <img src="../assets/BLISSback.png" alt="Logo Bliss" />
       </div>
       <ul class="navigasi">
         <li class="nav">
           <a href="../../indexberandaafterlogin.html#content">BERANDA</a>
         </li>
         <li class="nav">
-          <a href="../../indexberandaafterlogin.html#layanan">LAYANAN</a>
+          <a href="../../navbarcontent/layanan.html#layanan">LAYANAN</a>
         </li>
         <li class="nav">
-          <a href="../../indexberandaafterlogin.html#kontak">KONTAK</a>
+          <a href="../../navbarcontent/kontak.html#kontak">KONTAK</a>
         </li>
         <li class="nav">
-          <a href="../../indexberandaafterlogin.html#tentang">TENTANG</a>
+          <a href="../../navbarcontent/tentangkami.html#tentang">TENTANG</a>
         </li>
-        <li class="profil">
-          <a href="#">
-            <img
-              src="../assets/levipp.jpg"
-              alt="Foto Profil"
-              class="profil-img"
-            />
-          </a>
+        <li class="profil user-menu">
+          <span id="user-name"><i class="fa fa-user"></i> Nama User</span>
+          <div id="logout" class="logout">
+            <a href="#" onclick="logout()"
+              ><i class="fa fa-sign-out"></i> Logout</a
+            >
+          </div>
         </li>
       </ul>
     </nav>
@@ -63,12 +74,13 @@
             class="product-image"
             alt="Face Wash"
           />
-          <p class="judul-produk">Skintific Panthenol Gentle Gel Cleanser</p>
+          <p class="judul-produk">Pencuci Muka Panthenol & Asam Amino</p>
           <p class="deskripsi-produk">
-            Pembersih yang lembut namun efektif, dirancang khusus untuk kulit
-            kering dan sensitif. Diperkaya dengan Panthenol dan Asam Amino,
-            membersihkan secara mendalam tanpa menghilangkan kelembapan,
-            membantu menjaga kulit tetap lembut, seimbang, dan sehat.
+            Untuk kulit kering, pilihlah pembersih yang mengandung Panthenol dan
+            Asam Amino. Panthenol dikenal mampu menenangkan kulit, sementara
+            Asam Amino membantu memberikan hidrasi tanpa menghilangkan
+            kelembapan alami kulit. Kandungan ini efektif membersihkan kulit,
+            menjaga kelembapan, dan membuatnya tetap lembut dan sehat.
           </p>
         </div>
       </div>
@@ -87,13 +99,15 @@
             class="product-image"
             alt="Serum"
           />
-          <p class="judul-produk">SKINTIFIC 5X Ceramide Barrier Serum</p>
+          <p class="judul-produk">
+            Serum dengan extra Ceramide & Hidrasi Mendalam
+          </p>
           <p class="deskripsi-produk">
-            Serum powerful yang dirancang untuk memperbaiki dan memperkuat skin
-            barrier, sempurna untuk kulit kering dan sensitif. Formula unik ini
-            memberikan hidrasi mendalam, menenangkan iritasi, dan mencegah
-            kehilangan kelembapan, membuat kulit terasa lembut, halus, dan
-            tangguh.
+            Jika kulit kering Anda membutuhkan hidrasi mendalam, pilih serum
+            yang mengandung Ceramide. Ceramide membantu memperbaiki dan
+            memperkuat skin barrier, mencegah kehilangan kelembapan, serta
+            menenangkan iritasi. Serum dengan kandungan ini akan membuat kulit
+            terasa lebih halus, sehat, dan terlindungi.
           </p>
         </div>
       </div>
@@ -113,14 +127,14 @@
             alt="Moisturizer"
           />
           <p class="judul-produk">
-            SKINTIFIC 5X Ceramide Barrier Repair Moisturize Gel
+            Pelembap dengan Kandungan Centella & Panthenol
           </p>
           <p class="deskripsi-produk">
-            Centella Cream adalah pelembap ringan dengan Panthenol, TECA, dan
-            Centella Asiatica untuk menenangkan dan menyeimbangkan kulit
-            berminyak tanpa rasa greasy. Teknologi OIL-IN-WATER-GEL memberikan
-            hidrasi dan kontrol minyak, sekaligus mencerahkan dan mengurangi
-            tanda penuaan untuk kulit tampak sehat bercahaya.
+            Untuk pelembap, pilih yang mengandung Centella Asiatica, Panthenol,
+            dan TECA. Centella Asiatica terkenal dengan kemampuannya menenangkan
+            dan memperbaiki kulit, sedangkan Panthenol memberikan hidrasi
+            intens. TECA juga membantu menenangkan peradangan, menjaga kulit
+            tetap lembut, seimbang, dan terhidrasi tanpa rasa greasy.
           </p>
         </div>
       </div>
@@ -140,14 +154,16 @@
             alt="Sunscreen"
           />
           <p class="judul-produk">
-            SKINTIFIC 5X Ceramide Serum Sunscreen SPF50 PA++++
+            Sunscreen dengan Kandungan Ceramide & SPF 50
           </p>
 
           <p class="deskripsi-produk">
-            Sunscreen multifungsi yang tidak hanya melindungi kulit dari sinar
-            UV, tetapi juga memperbaiki dan memulihkan skin barrier dengan 5X
-            Ceramide. Formula ringan ini cepat meresap, memberikan hasil lembap
-            tanpa rasa greasy.
+            Untuk perlindungan UV, pilih sunscreen dengan SPF 50 yang mengandung
+            Ceramide. Ceramide memperkuat skin barrier dan membantu menjaga
+            kelembapan kulit sepanjang hari, melindungi kulit kering dari efek
+            buruk sinar UV. Formulanya yang ringan dan cepat meresap memberikan
+            hasil lembap tanpa rasa berminyak, sempurna untuk kulit kering yang
+            membutuhkan perlindungan lebih.
           </p>
         </div>
       </div>
@@ -156,7 +172,7 @@
     <footer>
       <div class="upper-footer">
         <div class="bliss">
-          <img src="../assets/BLISSback.png" alt="" />
+          <img src="../assets/BLISSback.png" alt="LOGOBLISS" />
           <p>Beauty, Love, Inspiration, Skin and Style</p>
         </div>
         <div class="hukumtautan">
@@ -173,16 +189,14 @@
               <li>
                 <a href="../../indexberandaafterlogin.html#content">Beranda</a>
               </li>
-              <li>
-                <a href="../../indexberandaafterlogin.html#layanan">Layanan</a>
+              <li class="nav">
+                <a href="../../navbarcontent/layanan.html#layanan">Layanan</a>
               </li>
-              <li>
-                <a href="../../indexberandaafterlogin.html#tentang"
-                  >Tentang Kami</a
-                >
+              <li class="nav">
+                <a href="../../navbarcontent/kontak.html#kontak">Kontak</a>
               </li>
-              <li>
-                <a href="../../indexberandaafterlogin.html#kontak">Kontak</a>
+              <li class="nav">
+                <a href="../../navbarcontent/tentangkami.html">Tentang</a>
               </li>
             </ul>
           </div>
@@ -192,5 +206,24 @@
     </footer>
     <button id="scrollToTop" onclick="scrollToTop()">&#8593;</button>
     <script src="../script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const userLogin = sessionStorage.getItem("userLogin");
+        const profileContent = document.getElementById("profile-content");
+
+        if (userLogin) {
+          // Tampilkan nama pengguna sebagai teks
+          profileContent.innerHTML = `
+            <span style="color: #000; font-weight: bold; font-size: 16px;">${userLogin}</span>
+          `;
+        } else {
+          // Jika tidak login, tampilkan foto profil default
+          profileContent.innerHTML = `
+            <img src="assets/levipp.jpg" alt="Foto Profil" class="profil-img" />
+          `;
+        }
+      });
+    </script>
+    <script src="navbar.js"></script>
   </body>
 </html>

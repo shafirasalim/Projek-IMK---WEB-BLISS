@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BLISS | SKINCARE |BERMINYAK</title>
     <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
       rel="stylesheet"
     />
@@ -16,37 +20,44 @@
       href="https://fonts.googleapis.com/css2?family=Amiri&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/skincarejk.css" />
-  </head>
-  <body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <nav class="navbar">
       <div class="logo">
-        <img src="../assets/BLISSback.png" alt="LOGO BLISS" />
+        <img src="../assets/BLISSback.png" alt="Logo Bliss" />
       </div>
       <ul class="navigasi">
         <li class="nav">
           <a href="../../indexberandaafterlogin.html#content">BERANDA</a>
         </li>
         <li class="nav">
-          <a href="../../indexberandaafterlogin.html#layanan">LAYANAN</a>
+          <a href="../../navbarcontent/layanan.html#layanan">LAYANAN</a>
         </li>
         <li class="nav">
-          <a href="../../indexberandaafterlogin.html#kontak">KONTAK</a>
+          <a href="../../navbarcontent/kontak.html#kontak">KONTAK</a>
         </li>
         <li class="nav">
-          <a href="../../indexberandaafterlogin.html#tentang">TENTANG</a>
+          <a href="../../navbarcontent/tentangkami.html#tentang">TENTANG</a>
         </li>
-        <li class="profil">
-          <a href="#">
-            <img
-              src="../assets/levipp.jpg"
-              alt="Foto Profil"
-              class="profil-img"
-            />
-          </a>
+        <li class="profil user-menu">
+          <span id="user-name"><i class="fa fa-user"></i> Nama User</span>
+          <div id="logout" class="logout">
+            <a href="#" onclick="logout()"
+              ><i class="fa fa-sign-out"></i> Logout</a
+            >
+          </div>
         </li>
       </ul>
     </nav>
+    <link rel="stylesheet" href="css/skincarejk.css" />
+  </head>
+  <body>
     <h2>Khusus Untukmu, Sesuai <br />dengan Kulit Sensitifmu 💖</h2>
     <div class="products">
       <!-- CARD 1 -->
@@ -64,14 +75,14 @@
             alt="Face Wash"
           />
           <p class="judul-produk">
-            Centella Ampoule Foam – Gentle Yet Powerful Cleanser for Oily Skin
+            Centella Asiatica: Menenangkan dan Menyeimbangkan Produksi Minyak
           </p>
           <p class="deskripsi-produk">
-            Pembersih busa harian dengan pH rendah (5.0) yang dirancang untuk
-            membersihkan secara mendalam tanpa menghilangkan kelembapan.
-            Diformulasikan dengan surfaktan berbasis kelapa dan ekstrak Centella
-            Asiatica, membersihkan minyak berlebih, debu halus, serta kotoran,
-            sambil menjaga kulit tetap tenang dan terhidrasi.
+            Untuk kulit berminyak, pilih pembersih dengan surfactant lembut
+            berbasis kelapa untuk mengangkat kotoran dan minyak tanpa mengganggu
+            kelembapan, serta Centella Asiatica yang menenangkan dan membantu
+            menyeimbangkan sebum. Kombinasi ini menjaga kulit tetap bersih dan
+            segar tanpa rasa kering.
           </p>
         </div>
       </div>
@@ -91,15 +102,14 @@
             alt="Serum"
           />
           <p class="judul-produk">
-            Centella Ampoule – Soothing & Hydrating Serum for Oily Skin
+            Serum: Ekstrak Centella Asiatica & Tekstur Ringan
           </p>
           <p class="deskripsi-produk">
-            Serum ultra-ringan namun efektif, diperkaya dengan Ekstrak Centella
-            Asiatica dari Madagaskar untuk menenangkan iritasi, memberikan
-            hidrasi mendalam, dan mendukung kulit berjerawat. Formula cepat
-            meresap dan tidak lengket, memberikan kelembapan intens tanpa
-            menyumbat pori-pori, sehingga ideal untuk kulit berminyak dan
-            sensitif.
+            Kulit berminyak membutuhkan serum yang tidak menyumbat pori. Pilih
+            yang mengandung Centella Asiatica karena sifat anti-inflamasi dan
+            penyembuhannya membantu menenangkan jerawat dan iritasi. Formula
+            ringan dan cepat meresap akan memberikan hidrasi tanpa rasa lengket,
+            menjaga kulit tetap segar.
           </p>
         </div>
       </div>
@@ -119,13 +129,13 @@
             alt="Moisturizer"
           />
           <p class="judul-produk">
-            Centella Cream – Lightweight Moisturizer for Oily Skin
+            Pelembap dengan Ceramide & Formula Gel Ringan
           </p>
           <p class="deskripsi-produk">
-            Pelembap ringan namun memberikan hidrasi mendalam, dirancang untuk
-            memperbaiki, memperkuat, dan melindungi skin barrier. Sempurna untuk
-            kulit kering, sensitif, atau dehidrasi, formula bertekstur gel ini
-            mengunci kelembapan tanpa terasa berat atau lengket.
+            Meskipun berminyak, kulit tetap membutuhkan pelembap. Pilih formula
+            gel ringan yang mengandung Ceramide untuk memperkuat skin barrier
+            tanpa menambah kilap. Kombinasi ini mampu mengunci kelembapan dengan
+            nyaman tanpa menyumbat pori atau terasa berat di kulit.
           </p>
         </div>
       </div>
@@ -145,15 +155,15 @@
             alt="Sunscreen"
           />
           <p class="judul-produk">
-            Centella Air-Fit Suncream Plus SPF50+ PA++++ – Lightweight
-            Protection for Oily Skin
+            Sunscreen: 5X Ceramide & SPF Tinggi Tanpa Rasa Greasy
           </p>
 
           <p class="deskripsi-produk">
-            Sunscreen multifungsi yang tidak hanya melindungi kulit dari sinar
-            UV, tetapi juga memperbaiki dan memulihkan skin barrier dengan 5X
-            Ceramide. Formula ringan ini cepat meresap, memberikan hasil lembap
-            tanpa rasa greasy.
+            Sunscreen untuk kulit berminyak harus memiliki tekstur ultra-ringan,
+            cepat menyerap, dan bebas minyak. Kandungan seperti 5X Ceramide
+            membantu memperkuat skin barrier, sementara perlindungan SPF 50+
+            PA++++ menjaga kulit dari kerusakan sinar UV tanpa menimbulkan kilap
+            berlebih.
           </p>
         </div>
       </div>
@@ -162,7 +172,7 @@
     <footer>
       <div class="upper-footer">
         <div class="bliss">
-          <img src="../assets/BLISSback.png" alt="" />
+          <img src="../assets/BLISSback.png" alt="LOGOBLISS" />
           <p>Beauty, Love, Inspiration, Skin and Style</p>
         </div>
         <div class="hukumtautan">
@@ -176,17 +186,17 @@
           <div class="tautancepat">
             <h5>Tautan Cepat</h5>
             <ul>
-              <li class="nav">
-                <a href="../../indexberandaafterlogin.html#content">BERANDA</a>
+              <li>
+                <a href="../../indexberandaafterlogin.html#content">Beranda</a>
               </li>
               <li class="nav">
-                <a href="../../indexberandaafterlogin.html#layanan">LAYANAN</a>
+                <a href="../../navbarcontent/layanan.html#layanan">Layanan</a>
               </li>
               <li class="nav">
-                <a href="../../indexberandaafterlogin.html#kontak">KONTAK</a>
+                <a href="../../navbarcontent/kontak.html#kontak">Kontak</a>
               </li>
               <li class="nav">
-                <a href="../../indexberandaafterlogin.html#tentang">TENTANG</a>
+                <a href="../../navbarcontent/tentangkami.html">Tentang</a>
               </li>
             </ul>
           </div>
@@ -196,5 +206,24 @@
     </footer>
     <button id="scrollToTop" onclick="scrollToTop()">&#8593;</button>
     <script src="../script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const userLogin = sessionStorage.getItem("userLogin");
+        const profileContent = document.getElementById("profile-content");
+
+        if (userLogin) {
+          // Tampilkan nama pengguna sebagai teks
+          profileContent.innerHTML = `
+            <span style="color: #000; font-weight: bold; font-size: 16px;">${userLogin}</span>
+          `;
+        } else {
+          // Jika tidak login, tampilkan foto profil default
+          profileContent.innerHTML = `
+            <img src="assets/levipp.jpg" alt="Foto Profil" class="profil-img" />
+          `;
+        }
+      });
+    </script>
+    <script src="navbar.js"></script>
   </body>
 </html>

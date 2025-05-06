@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BLISS | SKINCARE | SENSITIF</title>
     <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
       rel="stylesheet"
     />
@@ -16,37 +20,45 @@
       href="https://fonts.googleapis.com/css2?family=Amiri&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/skincarejk.css" />
   </head>
   <body>
     <nav class="navbar">
       <div class="logo">
-        <img src="../assets/BLISSback.png" alt="LOGO BLISS" />
+        <img src="../assets/BLISSback.png" alt="Logo Bliss" />
       </div>
       <ul class="navigasi">
         <li class="nav">
           <a href="../../indexberandaafterlogin.html#content">BERANDA</a>
         </li>
         <li class="nav">
-          <a href="../../indexberandaafterlogin.html#layanan">LAYANAN</a>
+          <a href="../../navbarcontent/layanan.html#layanan">LAYANAN</a>
         </li>
         <li class="nav">
-          <a href="../../indexberandaafterlogin.html#kontak">KONTAK</a>
+          <a href="../../navbarcontent/kontak.html#kontak">KONTAK</a>
         </li>
         <li class="nav">
-          <a href="../../indexberandaafterlogin.html#tentang">TENTANG</a>
+          <a href="../../navbarcontent/tentangkami.html#tentang">TENTANG</a>
         </li>
-        <li class="profil">
-          <a href="#">
-            <img
-              src="../assets/levipp.jpg"
-              alt="Foto Profil"
-              class="profil-img"
-            />
-          </a>
+        <li class="profil user-menu">
+          <span id="user-name"><i class="fa fa-user"></i> Nama User</span>
+          <div id="logout" class="logout">
+            <a href="#" onclick="logout()"
+              ><i class="fa fa-sign-out"></i> Logout</a
+            >
+          </div>
         </li>
       </ul>
     </nav>
+
     <h2>Khusus Untukmu, Sesuai <br />dengan Kulit Sensitifmu 💖</h2>
     <div class="products">
       <!-- CARD 1 -->
@@ -64,13 +76,14 @@
             alt="Face Wash"
           />
           <p class="judul-produk">
-            ELFORMULA Daily Gentle Low pH Facial Cleanser
+            Pencuci muka dengan Panthenol & Asam Amino untuk Kulit Sensitif
           </p>
           <p class="deskripsi-produk">
-            Pembersih lembut tanpa pengelupasan, dirancang khusus untuk kulit
-            kering dan sensitif. Diperkaya dengan Panthenol & Asam Amino,
-            formula ini mengangkat kotoran sambil menjaga kelembapan, membuat
-            kulit tetap lembut, seimbang, dan bebas iritasi.
+            Untuk kulit sensitif, kandungan Panthenol dan Asam Amino sangat
+            ideal. Panthenol menenangkan kulit dan membantu mempertahankan
+            kelembapan, sementara Asam Amino mendukung hidrasi tanpa menyebabkan
+            iritasi. Kandungan ini membantu menjaga kulit tetap lembut dan
+            sehat, mengangkat kotoran tanpa mengganggu keseimbangan alami kulit.
           </p>
         </div>
       </div>
@@ -90,14 +103,16 @@
             alt="Serum"
           />
           <p class="judul-produk">
-            ELFORMULA Intensive CeraHydro Barrier Repair Serum
+            Serum extra Ceramide & Centella Asiatica untuk Menguatkan Skin
+            Barrier
           </p>
           <p class="deskripsi-produk">
-            Serum pelembap intensif yang memperbaiki skin barrier, dirancang
-            khusus untuk kulit sensitif dan reaktif. Diperkaya dengan Ceramide
-            NP, Centella Asiatica, dan Ekstrak Oat, formula ini membantu
-            menenangkan iritasi, mengembalikan kelembapan, dan memperkuat
-            pertahanan alami kulit.
+            Ceramide adalah bahan yang sangat bermanfaat untuk memperbaiki dan
+            memperkuat skin barrier pada kulit sensitif. Kandungan ini membantu
+            mengunci kelembapan dan melindungi kulit dari faktor eksternal yang
+            dapat menyebabkan iritasi. Ditambah dengan Centella Asiatica, yang
+            memiliki sifat menenangkan dan mempercepat penyembuhan kulit, kulit
+            sensitif akan terlindungi dan terasa lebih nyaman.
           </p>
         </div>
       </div>
@@ -117,13 +132,13 @@
             alt="Moisturizer"
           />
           <p class="judul-produk">
-            ELFORMULA Intensive CeraHydro Barrier Repair Moisture Gel
+            Pelembab dengan Ekstrak Oat untuk Menenangkan Kulit Sensitif
           </p>
           <p class="deskripsi-produk">
-            Pelembap ringan namun sangat menutrisi, dirancang untuk kulit
-            sensitif dan reaktif. Diperkaya dengan Ceramide NP, Centella
-            Asiatica, dan Ekstrak Oat, formula ini memperkuat skin barrier,
-            memberikan hidrasi mendalam, dan menenangkan iritasi.
+            Ekstrak Oat memberikan manfaat menenangkan pada kulit sensitif dan
+            reaktif. Kandungan ini bekerja efektif untuk mengurangi peradangan
+            dan iritasi pada kulit, membuat kulit terasa lebih halus dan
+            terlindungi dari lingkungan yang keras.
           </p>
         </div>
       </div>
@@ -143,15 +158,15 @@
             alt="Sunscreen"
           />
           <p class="judul-produk">
-            ELFORMULA Intensive CeraHydro Barrier Repair Sunscreen SPF 50+++
+            Perlindungan UV dengan SPF 50+++ dan Ceramide
           </p>
 
           <p class="deskripsi-produk">
-            Sunscreen lembut namun powerful, dirancang untuk melindungi,
-            menenangkan, dan memperkuat kulit sensitif. Dengan perlindungan UV
-            spektrum luas (SPF 50+++), formula ini melindungi dari kerusakan
-            akibat sinar matahari dan mencegah penuaan dini, sambil menjaga skin
-            barrier tetap sehat.
+            Kulit sensitif membutuhkan perlindungan ekstra dari sinar UV. SPF
+            50+++ memberikan perlindungan optimal dari paparan sinar matahari
+            yang dapat menyebabkan kerusakan dan penuaan dini. Ditambah dengan
+            Ceramide, kandungan ini memperkuat skin barrier, menjaga kelembapan,
+            dan mencegah kerusakan akibat paparan sinar UV.
           </p>
         </div>
       </div>
@@ -160,7 +175,7 @@
     <footer>
       <div class="upper-footer">
         <div class="bliss">
-          <img src="../assets/BLISSback.png" alt="" />
+          <img src="../assets/BLISSback.png" alt="LOGOBLISS" />
           <p>Beauty, Love, Inspiration, Skin and Style</p>
         </div>
         <div class="hukumtautan">
@@ -177,16 +192,14 @@
               <li>
                 <a href="../../indexberandaafterlogin.html#content">Beranda</a>
               </li>
-              <li>
-                <a href="../../indexberandaafterlogin.html#layanan">Layanan</a>
+              <li class="nav">
+                <a href="../../navbarcontent/layanan.html#layanan">Layanan</a>
               </li>
-              <li>
-                <a href="../../indexberandaafterlogin.html#tentang"
-                  >Tentang Kami</a
-                >
+              <li class="nav">
+                <a href="../../navbarcontent/kontak.html#kontak">Kontak</a>
               </li>
-              <li>
-                <a href="../../indexberandaafterlogin.html#kontak">Kontak</a>
+              <li class="nav">
+                <a href="../../navbarcontent/tentangkami.html">Tentang</a>
               </li>
             </ul>
           </div>
@@ -196,5 +209,24 @@
     </footer>
     <button id="scrollToTop" onclick="scrollToTop()">&#8593;</button>
     <script src="../script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const userLogin = sessionStorage.getItem("userLogin");
+        const profileContent = document.getElementById("profile-content");
+
+        if (userLogin) {
+          // Tampilkan nama pengguna sebagai teks
+          profileContent.innerHTML = `
+            <span style="color: #000; font-weight: bold; font-size: 16px;">${userLogin}</span>
+          `;
+        } else {
+          // Jika tidak login, tampilkan foto profil default
+          profileContent.innerHTML = `
+            <img src="assets/levipp.jpg" alt="Foto Profil" class="profil-img" />
+          `;
+        }
+      });
+    </script>
+    <script src="navbar.js"></script>
   </body>
 </html>
