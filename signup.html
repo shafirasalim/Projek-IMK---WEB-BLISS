@@ -51,14 +51,13 @@
       document
         .getElementById("signupForm")
         .addEventListener("submit", function (e) {
-          e.preventDefault(); // Mencegah form dikirim otomatis
+          e.preventDefault();
 
           const nama = document.getElementById("nama").value.trim();
           const email = document.getElementById("email").value.trim();
           const password = document.getElementById("password").value;
           const konfirmasi = document.getElementById("konfirmasi").value;
 
-          // Validasi input
           if (!nama || !email || !password || !konfirmasi) {
             alert("Semua kolom harus diisi!");
             return;
@@ -68,15 +67,9 @@
             alert("Kata sandi tidak cocok!");
             return;
           }
-
-          // Simulasi pendaftaran berhasil
-          sessionStorage.setItem("userLogin", nama); // Menyimpan nama ke sessionStorage
-
-          // Menampilkan alert pendaftaran berhasil
+          sessionStorage.setItem("userLogin", nama);
           alert("Akun berhasil didaftarkan!");
-
-          // Redirect ke halaman setelah pendaftaran berhasil
-          window.location.href = "indexlogin.html"; // Ganti sesuai tujuan halaman setelah pendaftaran
+          window.location.href = "indexlogin.html";
         });
     </script>
   </body>

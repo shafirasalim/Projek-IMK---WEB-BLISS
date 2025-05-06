@@ -74,7 +74,7 @@ body {
 
 .login-card {
   width: 100%;
-  max-width: 280px; /* Lebih ramping */
+  max-width: 280px;
   display: flex;
   flex-direction: column;
   gap: 18px;

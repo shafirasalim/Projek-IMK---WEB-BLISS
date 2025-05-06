@@ -298,11 +298,13 @@ body {
 .modal-button {
   padding: 10px 20px;
   margin: 10px;
+  width: 70px;
   background-color: #4a216f;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  text-align: center;
 }
 
 button:hover {
@@ -505,7 +507,7 @@ button:hover {
 }
 
 .anggota-tim .tim-teks {
-  min-width: 160px; /* Ukuran minimum */
+  min-width: 160px;
   height: 35px;
   position: absolute;
   bottom: -15px;
@@ -521,7 +523,7 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  white-space: nowrap; /* Biar gak patah di tengah */
+  white-space: nowrap;
 }
 
 /* KONTAK */
@@ -632,7 +634,7 @@ button:hover {
 .kontak-info {
   flex: 1;
   color: black;
-  margin-top: 30px; /* tambahin ini biar yakin */
+  margin-top: 30px;
 }
 
 .kontak-info h3 {
@@ -796,7 +798,7 @@ footer .hukumtautan {
   justify-content: flex-end;
   max-width: 600px;
   margin-left: auto;
-  margin-right: 40px; /* jarak dari pinggir kanan */
+  margin-right: 40px;
   gap: 40px;
 }
 

@@ -608,7 +608,7 @@ body {
 .kontak-info {
   flex: 1;
   color: black;
-  margin-top: 30px; /* tambahin ini biar yakin */
+  margin-top: 30px;
 }
 
 .kontak-info h3 {

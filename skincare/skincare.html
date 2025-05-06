@@ -486,12 +486,10 @@
         const profileContent = document.getElementById("profile-content");
 
         if (userLogin) {
-          // Tampilkan nama pengguna sebagai teks
           profileContent.innerHTML = `
             <span style="color: #000; font-weight: bold; font-size: 16px;">${userLogin}</span>
           `;
         } else {
-          // Jika tidak login, tampilkan foto profil default
           profileContent.innerHTML = `
             <img src="assets/levipp.jpg" alt="Foto Profil" class="profil-img" />
           `;
