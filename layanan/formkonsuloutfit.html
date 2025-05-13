@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BLISS | Konsultasi Kecantikan</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .form-container {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 400px;
+        text-align: center;
+      }
+
+      h3 {
+        color: #4a216f;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+      select {
+        padding: 12px;
+        width: 100%;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      select:focus {
+        border-color: #a682d1;
+      }
+
+      button {
+        background-color: #a682d1;
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #7b5eb0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h3>Pilih Body Shape Anda</h3>
+      <form onsubmit="sendToWhatsapp(); return false;">
+        <select id="kulit" required>
+          <option value="">-- Pilih Body Shape--</option>
+          <option value="Apel">Apel</option>
+          <option value="Jam-Pasir">jam Pasir</option>
+          <option value="Segitiga">Segitiga</option>
+          <option value="Persegi-Panjang">Persegi Panjang</option>
+          <option value="Segitiga-Terbalik">Segitiga Terbalik</option>
+        </select>
+        <button type="submit">Kirim ke WhatsApp</button>
+      </form>
+    </div>
+
+    <script>
+      function sendToWhatsapp() {
+        const jenisKulit = document.getElementById("kulit").value;
+        const userLogin = sessionStorage.getItem("userLogin") || "Pengguna";
+
+        if (!jenisKulit) {
+          alert("Pilih jenis kulit terlebih dahulu!");
+          return;
+        }
+
+        const pesan = `Halo, saya ${userLogin}. Saya mau konsultasi terkait dengan Panduan Gaya Berpakaian Stylish. Bodyshape saya adalah ${jenisKulit}.`;
+        const encodedPesan = encodeURIComponent(pesan);
+        const nomorWA = "6287790971502";
+
+        window.location.href = `https://wa.me/${nomorWA}?text=${encodedPesan}`;
+      }
+    </script>
+  </body>
+</html>
